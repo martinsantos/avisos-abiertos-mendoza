@@ -1,0 +1,44 @@
+{
+  "codeCommit": "3d7de096197b397f5f38afb97f4486ebc8a0d2a0",
+  "previousCodeCommit": "df945a932f592e492a930e55c5bcd36f7a894223",
+  "siteID": "appgprj_6ac3ed60f9e881919bb8c9e7929d0fa4",
+  "typecheck": "PASS",
+  "build": "PASS",
+  "tests": {
+    "pass": 14,
+    "fail": 0,
+    "integration": 13,
+    "compiledClientDOMModelWithD1R2": 1
+  },
+  "fix": "Clear prepared text, institutional URL, receipt reference, credential, detail and visible evidence list when starting another notice. Always derive prepared/reference UI from the current server notice. Restore local datetime default after resetting the form. Existing notice photos remain persisted and recoverable.",
+  "flowResults": {
+    "A_registeredPreparedReceipt": "PASS in client DOM model with real local D1/R2",
+    "errorPreservesForm": "PASS in client DOM model with synthetic 503 response",
+    "B_hasNoAData": "PASS in client DOM model with real local D1/R2",
+    "reloadAandB": "PASS in fresh client DOM models with real local D1/R2",
+    "A_photoRecovered": "PASS bytes identical from private R2 route",
+    "copyPrivateFragment": "PASS in clipboard model; real permissions not verified",
+    "browserViewportPhone": "NOT RUN",
+    "browserVisualScreenshots": "NOT AVAILABLE",
+    "browserConsoleAndPageIdentity": "NOT RUN",
+    "browserPhotoPicker": "NOT RUN",
+    "realClipboardGPSWebMCP": "NOT RUN"
+  },
+  "browserBlocker": {
+    "managedLinux": true,
+    "controlBrowserSkill": "not available in session catalog or filesystem; executor skill pagination exhausted",
+    "playwrightPackage": "1.62.1 available but no browser binary found",
+    "rule": "Sites managed-linux reference requires control-browser and prohibits an improvised browser-control path if unavailable",
+    "reference": "skill://sites@openai-curated-remote/root/.codex/plugins/cache/openai-curated-remote/sites/0.1.75/skills/sites-building/references/preview/managed-linux.md"
+  },
+  "staticMobileReview": {
+    "viewportMeta": true,
+    "maxWidth480CSS": true,
+    "labels": "Spanish readable labels in source; rendered appearance unverified",
+    "copy": "Explicitly registered/prepared/user-declared receipt, no simulated official sending"
+  },
+  "officialRequestsSent": 0,
+  "privateCorpusImports": 0,
+  "published": false,
+  "DNSChanged": false
+}

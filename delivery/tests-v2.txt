@@ -1,0 +1,26 @@
+
+> avisos-abiertos@1.0.0 test
+> node --test tests/*.mjs
+
+✔ cliente A preparado con constancia → B limpio → recuperar A/B; error conserva formulario (941.246527ms)
+✔ creación anónima autorizada y hash (63.835099ms)
+✔ persistencia real después de reiniciar Worker (321.809248ms)
+✔ sin token y token ajeno no filtran (9.521874ms)
+✔ idempotencia privada, conflicto y aislamiento de sesión (34.106402ms)
+✔ foto persistida con hash y lectura privada (59.623998ms)
+✔ foto truncada, tamaño y MIME rechazan (36.152541ms)
+✔ PNG indexado sin PLTE rechaza incluso con CRC correctos (8.151815ms)
+✔ paridad REST/MCP catálogo y contexto vacío (17.652599ms)
+✔ MCP identidad y permisos por objeto (47.522697ms)
+✔ preparación sin envío, constancia declarada (19.154453ms)
+✔ origen/CSRF, sesión y ausencia de feed (31.746548ms)
+✔ cuota y máximo de adjuntos (56.227175ms)
+✔ autoalojamiento ignora identidad aportada por caller (145.17463ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2456.948572
