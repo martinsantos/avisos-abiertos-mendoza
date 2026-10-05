@@ -1,0 +1,5 @@
+node_modules/
+.wrangler/
+.env
+.sites-runtime/
+delivery/*.tar.gz

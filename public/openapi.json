@@ -1,0 +1,646 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Avisos Abiertos · Última Milla",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Sesión para crear; credencial por aviso para operaciones propias"
+      }
+    }
+  },
+  "paths": {
+    "/session": {
+      "post": {
+        "summary": "Obtener sesión anónima válida una hora",
+        "parameters": [
+          {
+            "name": "X-Avisos-Client",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          }
+        ],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Resultado JSON; fotos como bytes privados"
+          },
+          "201": {
+            "description": "Creación persistida"
+          },
+          "400": {
+            "description": "Entrada inválida"
+          },
+          "401": {
+            "description": "Sesión inválida"
+          },
+          "403": {
+            "description": "Origen o protección inválidos"
+          },
+          "404": {
+            "description": "No disponible o credencial incorrecta"
+          },
+          "409": {
+            "description": "Conflicto o límite de adjuntos"
+          },
+          "413": {
+            "description": "Límite de bytes"
+          },
+          "429": {
+            "description": "Cuota temporal"
+          },
+          "503": {
+            "description": "Almacenamiento no disponible"
+          }
+        }
+      }
+    },
+    "/channels": {
+      "get": {
+        "summary": "Catálogo revisado",
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Resultado JSON; fotos como bytes privados"
+          },
+          "201": {
+            "description": "Creación persistida"
+          },
+          "400": {
+            "description": "Entrada inválida"
+          },
+          "401": {
+            "description": "Sesión inválida"
+          },
+          "403": {
+            "description": "Origen o protección inválidos"
+          },
+          "404": {
+            "description": "No disponible o credencial incorrecta"
+          },
+          "409": {
+            "description": "Conflicto o límite de adjuntos"
+          },
+          "413": {
+            "description": "Límite de bytes"
+          },
+          "429": {
+            "description": "Cuota temporal"
+          },
+          "503": {
+            "description": "Almacenamiento no disponible"
+          }
+        }
+      }
+    },
+    "/context/search": {
+      "get": {
+        "summary": "Proyección documental publicable",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 240
+            }
+          }
+        ],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Resultado JSON; fotos como bytes privados"
+          },
+          "201": {
+            "description": "Creación persistida"
+          },
+          "400": {
+            "description": "Entrada inválida"
+          },
+          "401": {
+            "description": "Sesión inválida"
+          },
+          "403": {
+            "description": "Origen o protección inválidos"
+          },
+          "404": {
+            "description": "No disponible o credencial incorrecta"
+          },
+          "409": {
+            "description": "Conflicto o límite de adjuntos"
+          },
+          "413": {
+            "description": "Límite de bytes"
+          },
+          "429": {
+            "description": "Cuota temporal"
+          },
+          "503": {
+            "description": "Almacenamiento no disponible"
+          }
+        }
+      }
+    },
+    "/notices": {
+      "post": {
+        "summary": "Crear; bearer de sesión y credencial del aviso generada por el cliente",
+        "parameters": [
+          {
+            "name": "X-Avisos-Client",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "place",
+                  "department",
+                  "description",
+                  "occurredAt",
+                  "credential",
+                  "idempotencyKey"
+                ],
+                "properties": {
+                  "place": {
+                    "type": "string",
+                    "maxLength": 240
+                  },
+                  "department": {
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "description": {
+                    "type": "string",
+                    "maxLength": 4000
+                  },
+                  "occurredAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "credential": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "idempotencyKey": {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  "location": {
+                    "type": "object",
+                    "required": [
+                      "latitude",
+                      "longitude",
+                      "accuracy"
+                    ],
+                    "properties": {
+                      "latitude": {
+                        "type": "number"
+                      },
+                      "longitude": {
+                        "type": "number"
+                      },
+                      "accuracy": {
+                        "type": "number",
+                        "description": "Precisión en metros"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resultado JSON; fotos como bytes privados"
+          },
+          "201": {
+            "description": "Creación persistida"
+          },
+          "400": {
+            "description": "Entrada inválida"
+          },
+          "401": {
+            "description": "Sesión inválida"
+          },
+          "403": {
+            "description": "Origen o protección inválidos"
+          },
+          "404": {
+            "description": "No disponible o credencial incorrecta"
+          },
+          "409": {
+            "description": "Conflicto o límite de adjuntos"
+          },
+          "413": {
+            "description": "Límite de bytes"
+          },
+          "429": {
+            "description": "Cuota temporal"
+          },
+          "503": {
+            "description": "Almacenamiento no disponible"
+          }
+        }
+      }
+    },
+    "/notices/{id}": {
+      "get": {
+        "summary": "Leer aviso propio",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resultado JSON; fotos como bytes privados"
+          },
+          "201": {
+            "description": "Creación persistida"
+          },
+          "400": {
+            "description": "Entrada inválida"
+          },
+          "401": {
+            "description": "Sesión inválida"
+          },
+          "403": {
+            "description": "Origen o protección inválidos"
+          },
+          "404": {
+            "description": "No disponible o credencial incorrecta"
+          },
+          "409": {
+            "description": "Conflicto o límite de adjuntos"
+          },
+          "413": {
+            "description": "Límite de bytes"
+          },
+          "429": {
+            "description": "Cuota temporal"
+          },
+          "503": {
+            "description": "Almacenamiento no disponible"
+          }
+        }
+      }
+    },
+    "/notices/{id}/evidence": {
+      "post": {
+        "summary": "Agregar foto privada; máximo 3 MiB y tres por aviso",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Avisos-Client",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "image/png": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "image/jpeg": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resultado JSON; fotos como bytes privados"
+          },
+          "201": {
+            "description": "Creación persistida"
+          },
+          "400": {
+            "description": "Entrada inválida"
+          },
+          "401": {
+            "description": "Sesión inválida"
+          },
+          "403": {
+            "description": "Origen o protección inválidos"
+          },
+          "404": {
+            "description": "No disponible o credencial incorrecta"
+          },
+          "409": {
+            "description": "Conflicto o límite de adjuntos"
+          },
+          "413": {
+            "description": "Límite de bytes"
+          },
+          "429": {
+            "description": "Cuota temporal"
+          },
+          "503": {
+            "description": "Almacenamiento no disponible"
+          }
+        }
+      }
+    },
+    "/notices/{id}/evidence/{evidenceId}": {
+      "get": {
+        "summary": "Descargar foto propia",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "evidenceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resultado JSON; fotos como bytes privados"
+          },
+          "201": {
+            "description": "Creación persistida"
+          },
+          "400": {
+            "description": "Entrada inválida"
+          },
+          "401": {
+            "description": "Sesión inválida"
+          },
+          "403": {
+            "description": "Origen o protección inválidos"
+          },
+          "404": {
+            "description": "No disponible o credencial incorrecta"
+          },
+          "409": {
+            "description": "Conflicto o límite de adjuntos"
+          },
+          "413": {
+            "description": "Límite de bytes"
+          },
+          "429": {
+            "description": "Cuota temporal"
+          },
+          "503": {
+            "description": "Almacenamiento no disponible"
+          }
+        }
+      }
+    },
+    "/notices/{id}/referral": {
+      "post": {
+        "summary": "Preparar texto; no enviar",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Avisos-Client",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "channelId"
+                ],
+                "properties": {
+                  "channelId": {
+                    "type": "string",
+                    "enum": [
+                      "ambiente",
+                      "dircas"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resultado JSON; fotos como bytes privados"
+          },
+          "201": {
+            "description": "Creación persistida"
+          },
+          "400": {
+            "description": "Entrada inválida"
+          },
+          "401": {
+            "description": "Sesión inválida"
+          },
+          "403": {
+            "description": "Origen o protección inválidos"
+          },
+          "404": {
+            "description": "No disponible o credencial incorrecta"
+          },
+          "409": {
+            "description": "Conflicto o límite de adjuntos"
+          },
+          "413": {
+            "description": "Límite de bytes"
+          },
+          "429": {
+            "description": "Cuota temporal"
+          },
+          "503": {
+            "description": "Almacenamiento no disponible"
+          }
+        }
+      }
+    },
+    "/notices/{id}/receipt": {
+      "post": {
+        "summary": "Referencia declarada, no verificada",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Avisos-Client",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "reference"
+                ],
+                "properties": {
+                  "reference": {
+                    "type": "string",
+                    "maxLength": 500
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resultado JSON; fotos como bytes privados"
+          },
+          "201": {
+            "description": "Creación persistida"
+          },
+          "400": {
+            "description": "Entrada inválida"
+          },
+          "401": {
+            "description": "Sesión inválida"
+          },
+          "403": {
+            "description": "Origen o protección inválidos"
+          },
+          "404": {
+            "description": "No disponible o credencial incorrecta"
+          },
+          "409": {
+            "description": "Conflicto o límite de adjuntos"
+          },
+          "413": {
+            "description": "Límite de bytes"
+          },
+          "429": {
+            "description": "Cuota temporal"
+          },
+          "503": {
+            "description": "Almacenamiento no disponible"
+          }
+        }
+      }
+    }
+  }
+}

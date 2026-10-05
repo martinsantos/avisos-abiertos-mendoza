@@ -1,0 +1,6 @@
+{
+  "name":"avisos-abiertos", "main":"dist/server/index.js", "compatibility_date":"2026-08-06",
+  "assets":{"directory":"dist/client","binding":"ASSETS","run_worker_first":true},
+  "d1_databases":[{"binding":"DB","database_name":"avisos-abiertos","database_id":"REEMPLAZAR","migrations_dir":"drizzle"}],
+  "r2_buckets":[{"binding":"EVIDENCE","bucket_name":"avisos-evidence-private"}]
+}
