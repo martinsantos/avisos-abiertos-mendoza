@@ -66,13 +66,12 @@ ${v.description}`;
     });
     $("evidence").append(b);
   }
-  if (v.prepared) {
-    $("prepared").hidden = false;
-    $("prepared").value = v.prepared.text;
-    $("open").hidden = false;
-    $("open").href = v.prepared.url;
-  }
-  if (v.reference) $("reference").value = v.reference.reference;
+  $("prepared").hidden = !v.prepared;
+  $("prepared").value = v.prepared?.text ?? "";
+  $("open").hidden = !v.prepared;
+  if (v.prepared) $("open").href = v.prepared.url;
+  else $("open").removeAttribute("href");
+  $("reference").value = v.reference?.reference ?? "";
 }
 $("gps").onclick = run(async () => {
   if (!navigator.geolocation) throw Error("GPS no disponible");
@@ -156,6 +155,17 @@ $("new").onclick = () => {
   draftSecret = random();
   idem = crypto.randomUUID();
   $("form").reset();
+  const now2 = /* @__PURE__ */ new Date();
+  $("form").occurredAt.value = new Date(now2.getTime() - now2.getTimezoneOffset() * 6e4).toISOString().slice(0, 16);
+  $("prepared").hidden = true;
+  $("prepared").value = "";
+  $("open").hidden = true;
+  $("open").removeAttribute("href");
+  $("reference").value = "";
+  $("detail").textContent = "";
+  $("credential").value = "";
+  $("credential").type = "password";
+  $("evidence").replaceChildren();
   location = null;
   $("precision").textContent = "La ubicaci\xF3n se consulta solo si la autoriz\xE1s.";
   current = null;
