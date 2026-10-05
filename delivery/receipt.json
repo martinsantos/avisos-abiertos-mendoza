@@ -1,0 +1,57 @@
+{
+  "service": "Avisos Abiertos · Última Milla",
+  "branch": "codex/avisos-abiertos-mvp-20261005",
+  "baseCommit": "cfc760ae73cb66fe387859dd7dbbd3e151d69a0e",
+  "codeCommit": "df945a932f592e492a930e55c5bcd36f7a894223",
+  "project_id": "appgprj_6ac3ed60f9e881919bb8c9e7929d0fa4",
+  "runtimeEntry": "dist/server/index.js",
+  "runtimeExport": "default.fetch(request, env)",
+  "publicAssets": "dist/client",
+  "bindings": {
+    "d1": "DB",
+    "r2": "EVIDENCE",
+    "static": "ASSETS"
+  },
+  "requiredSitesRuntimeConfig": {
+    "TRUST_SITES_IDENTITY": "sites-dispatcher (only behind trusted Sites dispatcher)"
+  },
+  "verification": {
+    "typecheck": "PASS",
+    "build": "PASS",
+    "integration": {
+      "pass": 13,
+      "fail": 0,
+      "runtime": "Miniflare/workerd, compatibility date 2026-08-06, persistent local D1/R2"
+    },
+    "browserVisual": "not verified",
+    "webMCP": "implemented, not verified in a supporting browser",
+    "SitesOAuthExternalClient": "not verified; unpublished"
+  },
+  "counts": {
+    "trackedCodeFiles": 32,
+    "schemaTables": 5,
+    "schemaMigrations": 1,
+    "mcpTools": 7,
+    "publicApprovedDocuments": 0,
+    "privateCorpusImports": 0
+  },
+  "limits": {
+    "sessionTTLSeconds": 3600,
+    "sessionsPerIPPerHour": 30,
+    "createsPerSessionOrIdentityPerHour": 5,
+    "photosPerNotice": 3,
+    "photoBytes": 3145728,
+    "photoDeclaredPixels": 25000000,
+    "RESTJSONBytes": 16000,
+    "MCPJSONBytes": 4250000,
+    "searchResults": 20
+  },
+  "status": {
+    "sitePublished": false,
+    "DNSChanged": false,
+    "officialMessagesSent": 0,
+    "remoteBranchPushed": false,
+    "remoteBlocker": "GitHub connector create_branch: 403 Resource not accessible by integration; git HTTPS push: no credentials"
+  },
+  "packaging": "Official original package-site.mjs used; source tar is codeCommit without delivery metadata to avoid self-reference. Archive hashes recorded after compression in delivery/archives.json. No node_modules, tokens, user evidence, private corpus or C3 history included."
+}

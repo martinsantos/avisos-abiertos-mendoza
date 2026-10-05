@@ -1,0 +1,25 @@
+
+> avisos-abiertos@1.0.0 test
+> node --test tests/*.mjs
+
+✔ creación anónima autorizada y hash (56.547384ms)
+✔ persistencia real después de reiniciar Worker (656.628461ms)
+✔ sin token y token ajeno no filtran (10.960608ms)
+✔ idempotencia privada, conflicto y aislamiento de sesión (45.516021ms)
+✔ foto persistida con hash y lectura privada (80.893765ms)
+✔ foto truncada, tamaño y MIME rechazan (41.912419ms)
+✔ PNG indexado sin PLTE rechaza incluso con CRC correctos (6.807227ms)
+✔ paridad REST/MCP catálogo y contexto vacío (17.462081ms)
+✔ MCP identidad y permisos por objeto (64.581858ms)
+✔ preparación sin envío, constancia declarada (27.02566ms)
+✔ origen/CSRF, sesión y ausencia de feed (26.204261ms)
+✔ cuota y máximo de adjuntos (65.427387ms)
+✔ autoalojamiento ignora identidad aportada por caller (161.766004ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2239.310513
