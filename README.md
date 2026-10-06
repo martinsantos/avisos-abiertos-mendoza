@@ -1,6 +1,10 @@
 # Avisos Abiertos · Última Milla
 
-MVP público bajo MIT, preparado en VM para Sites y autoalojamiento. **Build listo para revisión; Site y DNS no publicados por esta entrega.** Iniciativa https://www.ultimamilla.com.ar/.
+MVP público bajo MIT, preparado en VM para Sites y autoalojamiento. **Demo publicada:** https://avisos-abiertos.carcelrobot.chatgpt.site/. Iniciativa https://www.ultimamilla.com.ar/.
+
+Publicación verificada el 6 de octubre de 2026, versión 1. Pasaron 14 comprobaciones HTTP del servicio alojado: entrada anónima, OpenAPI, catálogo, sesión, registro y recuperación, foto privada con bytes exactos, permisos y preparación manual. Se creó un único aviso claramente sintético; no se enviaron denuncias a organismos. El corpus público sigue vacío; el piloto interno de antecedentes es una línea separada. Las 14 pruebas previas de VM y su recibo se conservan en `delivery/`. OAuth de clientes MCP externos, GPS, clipboard, selector de fotos y apariencia móvil real siguen pendientes de prueba. `avisos.ultimamilla.com.ar` está preparado en Sites y pendiente de DNS; mientras tanto usar la URL de la demo.
+
+En Sites los bindings lógicos se declaran como cadenas: `"d1":"DB"`, `"r2":"EVIDENCE"`. El código alojado procede del commit `cb04a7d32ac38c73156e56f491db84c2723bff15`, con el Worker, cliente y migraciones probados en `3d7de09`; la diferencia es exclusivamente ese formato del manifiesto. El SHA de este repositorio público puede diferir por los recibos y documentación agregados.
 
 UI móvil en `/`; REST `/api/v1`; OpenAPI `/api/v1/openapi.json`; MCP stateless `POST /mcp`. D1 guarda avisos y hashes de credenciales; R2 guarda fotos privadas. No hay feed global ni importación del piloto C3. No requiere IA ni servicios pagos para el flujo básico; el hosting sí requiere disponibilidad y cuotas de D1/R2/Workers.
 
