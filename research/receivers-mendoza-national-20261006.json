@@ -1,0 +1,1968 @@
+{
+  "schemaVersion": 1,
+  "edition": "2026-10-06.v1",
+  "reviewedAt": "2026-10-06",
+  "coverage": {
+    "scope": "18 municipios de Mendoza, organismos provinciales relevantes y canales nacionales ambientales seleccionados",
+    "exhaustive": false,
+    "meaning": "Una ficha por municipio no acredita todos los trámites ni una integración probada. No se presentan canales nacionales seleccionados como totalidad de organismos argentinos.",
+    "municipal": 18,
+    "provincial": 5,
+    "national": 5,
+    "documentedIntake": 18,
+    "generalContact": 7,
+    "needsVerification": 3,
+    "channels": 44,
+    "automaticConnectors": 0,
+    "presentationsTested": 0
+  },
+  "statusLabels": {
+    "documented_intake": "Recepción publicada en fuente oficial; presentación y acuse no probados",
+    "general_contact": "Contacto institucional; admisión ambiental específica pendiente",
+    "needs_verification": "Canal a corroborar; no habilitar envío"
+  },
+  "policy": {
+    "actualDenunciationsSent": 0,
+    "sendAutomatically": false,
+    "receiverSuggestionIsCompetenceDecision": false,
+    "nearbyEntityIsResponsible": false,
+    "keepOfficialSourceAndVerificationState": true
+  },
+  "authorities": [
+    {
+      "id": "municipio-50007",
+      "name": "Ciudad de Mendoza · Centro de Contacto",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Capital",
+        "departmentId": "50007",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "Recibe reclamos, pedidos y sugerencias y los deriva al área competente.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://ciudaddemendoza.gob.ar/centro-de-contacto/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "capital-form",
+          "kind": "form",
+          "label": "Centro de Contacto",
+          "target": "https://ciudaddemendoza.gob.ar/centro-de-contacto/",
+          "requirements": [
+            "Nombre y apellido",
+            "DNI",
+            "Teléfono",
+            "Correo electrónico",
+            "Comentario o mensaje"
+          ],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "capital-phone",
+          "kind": "phone",
+          "label": "Línea 147",
+          "target": "147",
+          "requirements": [],
+          "attachments": {
+            "status": "not_applicable",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "none",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "municipio-50014",
+      "name": "General Alvear · Atención Ciudadana / Gestión Ambiental",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "General Alvear",
+        "departmentId": "50014",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "Portal enlazado oficialmente y teléfono del área ambiental. No se recorrió la presentación en Munidigital.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://alvearmendoza.gob.ar/contacto/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "alvear-portal",
+          "kind": "portal",
+          "label": "Sugerencias y Reclamos",
+          "target": "https://munidigital.com/citizenv2/generalalvear/informacion",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "alvear-env-phone",
+          "kind": "phone",
+          "label": "Gestión Ambiental",
+          "target": "02625 427611",
+          "requirements": [],
+          "attachments": {
+            "status": "not_applicable",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "none",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "alvear-form",
+          "kind": "form",
+          "label": "Contacto",
+          "target": "https://alvearmendoza.gob.ar/contacto/",
+          "requirements": [
+            "Nombre y apellido",
+            "Teléfono",
+            "Correo electrónico",
+            "Mensaje"
+          ],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "municipio-50021",
+      "name": "Godoy Cruz · Contacto Ciudadano / CAU",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Godoy Cruz",
+        "departmentId": "50021",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "La recepción inicia un trámite que se deriva al área municipal. No se probó constancia.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://www.godoycruz.gob.ar/sitio2/?p=21048",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "godoy-email",
+          "kind": "email",
+          "label": "CAU",
+          "target": "cau@godoycruz.gob.ar",
+          "requirements": [
+            "Nombre y apellido",
+            "Padrón municipal si corresponde",
+            "Domicilio/contacto del ciudadano",
+            "Domicilio del problema"
+          ],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "godoy-cidi",
+          "kind": "portal",
+          "label": "Ciudadanía Digital",
+          "target": "https://webapps.godoycruz.gob.ar/gestionesgam/com.gestionesweb.login",
+          "requirements": [
+            "Usuario CIDI",
+            "Datos del problema"
+          ],
+          "attachments": {
+            "status": "published_pdf_requirement",
+            "types": [
+              "application/pdf"
+            ],
+            "maxBytes": null
+          },
+          "authentication": "CIDI account; CAPTCHA observed",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ],
+      "sourcePublishedAt": "2023-10-06"
+    },
+    {
+      "id": "municipio-50028",
+      "name": "Guaymallén · GINA / Atención al Vecino",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Guaymallén",
+        "departmentId": "50028",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "La cabecera leída hoy anuncia GINA. No se validaron categorías ambientales, adjuntos ni comprobante.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://www.guaymallen.gob.ar/via-de-whatsapp-disponible-para-reclamos-y-consultas/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "guay-gina",
+          "kind": "whatsapp",
+          "label": "GINA (número en cabecera oficial)",
+          "target": "2615068885",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "user WhatsApp account; not traversed",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ],
+      "warnings": [
+        "La noticia de 2021 publica 2613822609; no usar ese contacto histórico como actual sin corroboración."
+      ],
+      "sourcePublishedAt": "2021-11-05"
+    },
+    {
+      "id": "municipio-50035",
+      "name": "Junín · Reclamos",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Junín",
+        "departmentId": "50035",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "Página oficial de reclamos con enlace WhatsApp observado en navegador.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://www.juninmendoza.gov.ar/reclamos-2/",
+          "reviewedAt": "2026-10-06",
+          "method": "browser_observed_link"
+        }
+      ],
+      "channels": [
+        {
+          "id": "junin-wa",
+          "kind": "whatsapp",
+          "label": "WhatsApp de Reclamos",
+          "target": "https://wa.me/5492634521759/",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "user WhatsApp account; not traversed",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "municipio-50042",
+      "name": "La Paz · Municipalidad",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "La Paz",
+        "departmentId": "50042",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "general_contact",
+      "summary": "El sitio actual muestra documentación legal. Canal específico de denuncias ambientales pendiente de validar.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://www.lapazmendoza.gob.ar/",
+          "reviewedAt": "2026-10-06",
+          "method": "browser_observed"
+        },
+        {
+          "url": "https://lapazmendoza.gob.ar/wp-content/uploads/2024/11/Licitacion-internet-n-54.pdf",
+          "reviewedAt": "2026-10-06",
+          "method": "official_document_indexed",
+          "documentYear": 2024
+        }
+      ],
+      "channels": [
+        {
+          "id": "lapaz-phone",
+          "kind": "phone",
+          "label": "Teléfono municipal publicado en documento",
+          "target": "02626 421100",
+          "requirements": [],
+          "attachments": {
+            "status": "not_applicable",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "none",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ],
+      "warnings": [
+        "Teléfono general de documento 2024, no recepción de denuncias probada."
+      ]
+    },
+    {
+      "id": "municipio-50049",
+      "name": "Las Heras · Obras y Servicios Públicos",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Las Heras",
+        "departmentId": "50049",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "Portal para limpieza, saneamiento, agua, arbolado, inspección, desinfección y otras categorías municipales.",
+      "topics": [
+        "residuos_urbanos",
+        "agua_servicios",
+        "saneamiento",
+        "arbolado",
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://lasheras.gob.ar/obras-y-servicios-publicos/",
+          "reviewedAt": "2026-10-06",
+          "method": "browser_observed_links_and_categories"
+        }
+      ],
+      "channels": [
+        {
+          "id": "lasheras-portal",
+          "kind": "portal",
+          "label": "Reclamos vecinales",
+          "target": "https://munidigital.com/citizenv2/lasheras/informacion?redirect=/lasheras/home",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "lasheras-phone",
+          "kind": "phone",
+          "label": "Reclamos vecinales",
+          "target": "0800 2225900",
+          "requirements": [],
+          "attachments": {
+            "status": "not_applicable",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "none",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "municipio-50056",
+      "name": "Lavalle · Contacto municipal",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Lavalle",
+        "departmentId": "50056",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "general_contact",
+      "summary": "Contacto municipal publicado; materia ambiental y trámite de denuncia específicos pendientes.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://lavallemendoza.gob.ar/public/contacto/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "lavalle-wa",
+          "kind": "whatsapp",
+          "label": "Contacto publicado",
+          "target": "+54 9 2613905758",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "user WhatsApp account; not traversed",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "lavalle-email",
+          "kind": "email",
+          "label": "Contacto institucional",
+          "target": "contacto@lavallemendoza.gob.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "municipio-50063",
+      "name": "Luján de Cuyo · Limpiando Luján / Luji",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Luján de Cuyo",
+        "departmentId": "50063",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "Distingue denuncias sobre residuos/escombros/aguas servidas de reclamos del servicio de higiene urbana.",
+      "topics": [
+        "residuos_urbanos",
+        "escombros",
+        "aguas_servidas",
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://limpiando.lujandecuyo.gob.ar/denuncias.php",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        },
+        {
+          "url": "https://lujandecuyo.gob.ar/contactcenter/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "lujan-luji",
+          "kind": "chat",
+          "label": "Denuncias y Reclamos con Luji",
+          "target": "https://limpiando.lujandecuyo.gob.ar/denuncias.php",
+          "requirements": [
+            "Palabra Denuncia o Reclamo según motivo",
+            "Tipo de problema",
+            "Foto",
+            "Dirección con numeración",
+            "Fecha y hora"
+          ],
+          "attachments": {
+            "status": "photos_requested_by_official_page",
+            "types": [
+              "photo"
+            ],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "lujan-contact-email",
+          "kind": "email",
+          "label": "Atención al Vecino",
+          "target": "atencionalvecino@lujandecuyo.gob.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "municipio-50070",
+      "name": "Maipú · Centro de Atención al Vecino",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Maipú",
+        "departmentId": "50070",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "Canales de Informes y Reclamos observados en pie del sitio. Formulario Google enlazado; requisitos internos no recorridos.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://www.maipu.gob.ar/",
+          "reviewedAt": "2026-10-06",
+          "method": "browser_observed_footer_and_link"
+        }
+      ],
+      "channels": [
+        {
+          "id": "maipu-phone",
+          "kind": "phone",
+          "label": "Informes y Reclamos",
+          "target": "0800 2228030",
+          "requirements": [],
+          "attachments": {
+            "status": "not_applicable",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "none",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "maipu-wa",
+          "kind": "whatsapp",
+          "label": "Atención al Vecino",
+          "target": "2617166619",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "maipu-form",
+          "kind": "form",
+          "label": "Consultas y Sugerencias",
+          "target": "https://forms.gle/LNhGTLD9TTCq9YVZ7",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "maipu-email",
+          "kind": "email",
+          "label": "Contacto institucional",
+          "target": "info@maipu.gob.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ],
+      "officeAddress": "Pablo Pescara 190, Ciudad de Maipú, Mendoza"
+    },
+    {
+      "id": "municipio-50077",
+      "name": "Malargüe · Ambiente / denuncia de basura y escombros",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Malargüe",
+        "departmentId": "50077",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "Recepción municipal anónima por teléfono/WhatsApp; pide dirección y fotografías.",
+      "topics": [
+        "residuos_urbanos",
+        "escombros"
+      ],
+      "sources": [
+        {
+          "url": "https://www.malargue.gov.ar/la-municipalidad-recuerda-como-denunciar-basura-y-escombros-en-la-via-publica-de-manera-anonima/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "malargue-wa",
+          "kind": "whatsapp",
+          "label": "Basura y escombros",
+          "target": "2604632611",
+          "requirements": [
+            "Dirección exacta",
+            "Fotos si es posible"
+          ],
+          "attachments": {
+            "status": "photos_requested_by_official_page",
+            "types": [
+              "photo"
+            ],
+            "maxBytes": null
+          },
+          "authentication": "user WhatsApp account; anonymous option published",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "malargue-phone",
+          "kind": "phone",
+          "label": "Basura y escombros",
+          "target": "2604632611",
+          "requirements": [
+            "Lugar y descripción"
+          ],
+          "attachments": {
+            "status": "not_applicable",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "anonymous option published",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "municipio-50084",
+      "name": "Rivadavia, Mendoza · Municipalidad",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Rivadavia",
+        "departmentId": "50084",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "general_contact",
+      "summary": "Página correcta de Mendoza verificada. Rótulo Reclamos sin acceso operativo observado.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://rivadaviamendoza.gob.ar/new/",
+          "reviewedAt": "2026-10-06",
+          "method": "browser_observed"
+        }
+      ],
+      "channels": [
+        {
+          "id": "rivadavia-phone",
+          "kind": "phone",
+          "label": "Contacto municipal mostrado",
+          "target": "2634442070 / 2634444548",
+          "requirements": [],
+          "attachments": {
+            "status": "not_applicable",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "none",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          },
+          "targetVerifiedForAutomaticUse": false
+        }
+      ],
+      "warnings": [
+        "El enlace tel difiere de los números mostrados; no autogenerar llamada sin corroboración.",
+        "Excluir rivadavia.gob.ar (San Juan) y munirivadavia.gob.ar (Buenos Aires)."
+      ]
+    },
+    {
+      "id": "municipio-50091",
+      "name": "San Carlos, Mendoza · Municipalidad",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "San Carlos",
+        "departmentId": "50091",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "needs_verification",
+      "summary": "Sitio institucional y sede identificados. No se verificó un canal vigente de denuncia/reclamo ambiental.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://sancarlos.gob.ar/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [],
+      "officeAddress": "Lencinas 508 y El Fuerte, Villa San Carlos, Mendoza",
+      "warnings": [
+        "Los enlaces Trámites leídos vuelven a la portada. No inventar un endpoint ni usar canales de San Carlos de otras jurisdicciones."
+      ]
+    },
+    {
+      "id": "municipio-50098",
+      "name": "General San Martín, Mendoza · Municipalidad",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "San Martín",
+        "departmentId": "50098",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "needs_verification",
+      "summary": "Directorio de delegaciones indexado; falta corroborar entrada actual de reclamos.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://sanmartinmza.gob.ar/",
+          "reviewedAt": "2026-10-06",
+          "method": "browser_content_inconsistent"
+        },
+        {
+          "url": "https://sanmartinmza.gob.ar/delegaciones/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_indexed_directory"
+        }
+      ],
+      "channels": [],
+      "warnings": [
+        "La portada observada contiene textos ajenos a la función municipal. No se afirma causa ni compromiso de seguridad, pero el canal queda sin habilitar hasta corroboración."
+      ]
+    },
+    {
+      "id": "municipio-50105",
+      "name": "San Rafael · Canales oficiales de reclamos",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "San Rafael",
+        "departmentId": "50105",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "El municipio publica teléfono y Rafaella como canales oficiales para reclamos a distancia.",
+      "topics": [
+        "residuos_urbanos",
+        "limpieza",
+        "arbolado",
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://www.sanrafael.gov.ar/el-municipio-recuerda-que-los-reclamos-se-reciben-por-los-canales-oficiales/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "sanrafael-phone",
+          "kind": "phone",
+          "label": "Reclamos oficiales",
+          "target": "0800 2220600",
+          "requirements": [],
+          "attachments": {
+            "status": "not_applicable",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "none",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "sanrafael-rafaella",
+          "kind": "chat",
+          "label": "Rafaella en el sitio oficial",
+          "target": "https://www.sanrafael.gov.ar/",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ],
+      "sourcePublishedAt": "2026-09-09",
+      "warnings": [
+        "La publicación no garantiza tratamiento de reclamos registrados en plataformas externas. Avisos Abiertos no acredita recepción municipal ni debe anunciar integración."
+      ]
+    },
+    {
+      "id": "municipio-50112",
+      "name": "Santa Rosa, Mendoza · Contacto municipal",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Santa Rosa",
+        "departmentId": "50112",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "general_contact",
+      "summary": "Formulario y email oficiales identificados; recepción ambiental y acuse pendientes.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://santarosamendoza.gob.ar/contact/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "santarosa-form",
+          "kind": "form",
+          "label": "Contacto municipal",
+          "target": "https://santarosamendoza.gob.ar/contact/",
+          "requirements": [
+            "Nombre",
+            "Apellido",
+            "Correo electrónico",
+            "Mensaje"
+          ],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "santarosa-email",
+          "kind": "email",
+          "label": "Contacto institucional",
+          "target": "contacto@santarosamendoza.gob.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ],
+      "officeAddress": "Julio A. Roca 281, Villa Cabecera, Santa Rosa, Mendoza",
+      "warnings": [
+        "Excluir santarosa.gob.ar, que corresponde a La Pampa.",
+        "El teléfono mostrado tiene formato incompleto; no incorporado para acción automática."
+      ]
+    },
+    {
+      "id": "municipio-50119",
+      "name": "Tunuyán · TUNU",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Tunuyán",
+        "departmentId": "50119",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "summary": "Chat municipal para consultas, reclamos y solicitudes con foto y ubicación.",
+      "topics": [
+        "municipal_services"
+      ],
+      "sources": [
+        {
+          "url": "https://www.tunuyan.gov.ar/site/tunu-el-nuevo-chatbot-de-la-municipalidad-de-tunuyan/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "tunuyan-tunu",
+          "kind": "whatsapp",
+          "label": "TUNU",
+          "target": "2622578555",
+          "requirements": [
+            "Motivo de solicitud",
+            "Ubicación",
+            "Foto cuando corresponda"
+          ],
+          "attachments": {
+            "status": "photo_and_location_supported_as_published",
+            "types": [
+              "photo"
+            ],
+            "maxBytes": null
+          },
+          "authentication": "user WhatsApp account; not traversed",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "municipio-50126",
+      "name": "Tupungato · Servicios Generales / Agua y Saneamiento",
+      "level": "municipal",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": "Tupungato",
+        "departmentId": "50126",
+        "geometryRole": "administrative_department",
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "general_contact",
+      "summary": "Áreas y contactos publicados para atención al público. No se verificó procedimiento ni constancia de denuncia.",
+      "topics": [
+        "municipal_services",
+        "agua_servicios",
+        "saneamiento"
+      ],
+      "sources": [
+        {
+          "url": "https://tupungato.gov.ar/?page_id=2276",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "channels": [
+        {
+          "id": "tupungato-services",
+          "kind": "email",
+          "label": "Servicios Generales",
+          "target": "serviciosgenerales@tupungato.gov.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "tupungato-water",
+          "kind": "email",
+          "label": "Agua y Saneamiento",
+          "target": "aguaysaneamiento@tupungato.gov.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "tupungato-control",
+          "kind": "email",
+          "label": "Fiscalización y Control",
+          "target": "fiscalizacionycontrol@tupungato.gov.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ],
+      "officeAddress": "Av. Belgrano 348, Tupungato, Mendoza"
+    },
+    {
+      "id": "ambiente",
+      "name": "Ministerio de Energía y Ambiente de Mendoza",
+      "level": "provincial",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "topics": [
+        "residuos_peligrosos",
+        "residuos_patogenicos",
+        "residuos_urbanos",
+        "efluentes",
+        "aire",
+        "ruido",
+        "mineria",
+        "petroleo"
+      ],
+      "summary": "Formulario ambiental provincial observado el 5 de octubre, con categorías y opción anónima sin devolución de seguimiento.",
+      "sources": [
+        {
+          "url": "https://www.mendoza.gob.ar/energiayambiente/",
+          "reviewedAt": "2026-10-05",
+          "method": "browser_observed_link"
+        }
+      ],
+      "channels": [
+        {
+          "id": "ambiente-form",
+          "kind": "form",
+          "label": "Consultas y Denuncias",
+          "target": "https://ticketsform.mendoza.gov.ar/ticketsform/servlet/responderformulario?PORTAL_AMBIENTE",
+          "requirements": [
+            "Categoría",
+            "Relato",
+            "Identificación/contacto si se elige modalidad identificada"
+          ],
+          "attachments": {
+            "status": "upload_step_observed_limits_unknown",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "identified or anonymous as offered by official form",
+          "officialReceipt": {
+            "status": "not_tested; anonymous option without official followup"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dircas",
+      "name": "DIRCAS · DGI",
+      "level": "provincial",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "topics": [
+        "agua_potable",
+        "saneamiento_servicio"
+      ],
+      "summary": "Portal de reclamos de servicios de agua potable/saneamiento. No receptor automático de toda contaminación de cauces.",
+      "sources": [
+        {
+          "url": "https://dircas.cloud.irrigacion.gov.ar/",
+          "reviewedAt": "2026-10-05",
+          "method": "browser_observed_link"
+        }
+      ],
+      "channels": [
+        {
+          "id": "dircas-gop",
+          "kind": "portal",
+          "label": "Reclamos DIRCAS",
+          "target": "https://reclamos.irrigacion.gov.ar/autogestion/web/site/login",
+          "requirements": [
+            "Cuenta del portal"
+          ],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "institutional portal account",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dgi-cauces",
+      "name": "DGI · contaminación del recurso hídrico",
+      "level": "provincial",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "needs_verification",
+      "topics": [
+        "contaminacion_cauces",
+        "efluentes"
+      ],
+      "summary": "Corroborar cauce/área competente y vigencia del canal especializado. Contacto de contingencias hallado en documento 2024, no habilitado para envío.",
+      "sources": [
+        {
+          "url": "https://www.mendoza.gov.ar/wp-content/uploads/sites/81/2024/10/IF-2024-06425737-GDEMZA-DGIRR.pdf",
+          "reviewedAt": "2026-10-06",
+          "method": "official_document_indexed",
+          "documentYear": 2024
+        }
+      ],
+      "channels": [
+        {
+          "id": "dgi-candidate-email",
+          "kind": "email",
+          "label": "Contacto documental por corroborar",
+          "target": "efluentes.contingencias@irrigacion.gov.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "disabled_pending_verification",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          },
+          "enabledForRecommendation": false
+        }
+      ]
+    },
+    {
+      "id": "mpf-mendoza",
+      "name": "Ministerio Público Fiscal de Mendoza",
+      "level": "provincial",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "topics": [
+        "posible_delito"
+      ],
+      "summary": "Denuncia penal virtual, con aplicación de competencia a revisar. El endpoint de entrada devolvió 502 al lector; no se ensayó presentación.",
+      "sources": [
+        {
+          "url": "https://mpfmza.jus.mendoza.gov.ar/denuncias-en-linea/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_link"
+        }
+      ],
+      "channels": [
+        {
+          "id": "mpf-mendoza-online",
+          "kind": "portal",
+          "label": "Denuncia en línea",
+          "target": "https://denuncias.jus.mendoza.gov.ar/",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ],
+      "warnings": [
+        "No usar MPF CABA/fiscalias.gob.ar como si fuera Mendoza."
+      ]
+    },
+    {
+      "id": "fiscalia-estado-mendoza",
+      "name": "Fiscalía de Estado de Mendoza · Asuntos Ambientales",
+      "level": "provincial",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": "50",
+        "province": "Mendoza",
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "general_contact",
+      "topics": [
+        "derechos_ambientales",
+        "actuacion_estatal"
+      ],
+      "summary": "Mesa de entradas y área ambiental publican contactos. Procedimiento/requisitos de denuncia y acuse específicos pendientes.",
+      "sources": [
+        {
+          "url": "https://fiscaliadeestadomendoza.gob.ar/contactos/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page"
+        }
+      ],
+      "officeAddress": "San Martín 624, Ciudad de Mendoza",
+      "channels": [
+        {
+          "id": "festado-email",
+          "kind": "email",
+          "label": "Contacto institucional",
+          "target": "fiscaliadeestado@mendoza.gov.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "festado-phone",
+          "kind": "phone",
+          "label": "Mesa de Entradas",
+          "target": "0261 4616300",
+          "requirements": [],
+          "attachments": {
+            "status": "not_applicable",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "none",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ufima",
+      "name": "UFIMA · Ministerio Público Fiscal de la Nación",
+      "level": "national",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": null,
+        "province": null,
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "topics": [
+        "posible_delito_ambiental",
+        "residuos_peligrosos",
+        "fauna_silvestre"
+      ],
+      "summary": "Publica recepción por email y escritos. Investigación de delitos ambientales y competencia federal por revisar; no destino de todo reclamo municipal.",
+      "sources": [
+        {
+          "url": "https://www.mpf.gob.ar/ufima/",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page_indexed"
+        }
+      ],
+      "officeAddress": "Av. Roque Sáenz Peña 1190, CABA",
+      "channels": [
+        {
+          "id": "ufima-email",
+          "kind": "email",
+          "label": "Denuncia a UFIMA",
+          "target": "ufima@mpf.gov.ar",
+          "requirements": [
+            "Datos relevantes del hecho",
+            "Información de contacto",
+            "Indicar pedido de reserva de identidad si corresponde"
+          ],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "contact details requested; identity reservation must be requested",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "senasa",
+      "name": "SENASA · Gestión de Denuncias Administrativas",
+      "level": "national",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": null,
+        "province": null,
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "topics": [
+        "competencia_senasa",
+        "sanidad_animal",
+        "agroalimentos"
+      ],
+      "summary": "Recepción de transgresiones de su competencia, con número de identificación para seguimiento publicado.",
+      "sources": [
+        {
+          "url": "https://www.argentina.gob.ar/senasa/sistema-de-denuncias",
+          "reviewedAt": "2026-10-06",
+          "method": "official_form"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/senasa/politica-de-integridad",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page_indexed",
+          "sourceUpdated": "2025-07"
+        }
+      ],
+      "channels": [
+        {
+          "id": "senasa-form",
+          "kind": "form",
+          "label": "Denuncia administrativa",
+          "target": "https://www.argentina.gob.ar/senasa/sistema-de-denuncias",
+          "requirements": [
+            "Correo electrónico",
+            "Motivo de denuncia"
+          ],
+          "attachments": {
+            "status": "published_requirements",
+            "types": [
+              "jpg",
+              "jpeg",
+              "png",
+              "txt",
+              "rtf",
+              "pdf",
+              "doc",
+              "docx",
+              "xls",
+              "xlsx",
+              "rar",
+              "zip"
+            ],
+            "maxBytes": 15000000,
+            "sizeRule": "less_than_15_MB_as_published_unit_not_specified"
+          },
+          "authentication": "form allows identity fields; reserves identity as published",
+          "officialReceipt": {
+            "status": "identification_number_published_not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "senasa-email",
+          "kind": "email",
+          "label": "Denuncias",
+          "target": "denuncias@senasa.gob.ar",
+          "requirements": [
+            "Corroborar formulario/documentación aplicable"
+          ],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ],
+      "warnings": [
+        "No inferir competencia sobre todo derrame o residuo."
+      ]
+    },
+    {
+      "id": "brigada-fauna-nacion",
+      "name": "Brigada de Control Ambiental · Ambiente Nación",
+      "level": "national",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": null,
+        "province": null,
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "topics": [
+        "trafico_fauna_silvestre"
+      ],
+      "summary": "Una publicación oficial remite denuncias de tráfico de fauna a este correo. Alcance especializado; no recepción universal de basura.",
+      "sources": [
+        {
+          "url": "https://www.argentina.gob.ar/noticias/fauna-silvestre-debe-tramitarse-previamente-la-autorizacion-de-ingreso-al-pais",
+          "reviewedAt": "2026-10-06",
+          "method": "official_publication"
+        }
+      ],
+      "channels": [
+        {
+          "id": "brigada-fauna-email",
+          "kind": "email",
+          "label": "Denuncia de tráfico de fauna",
+          "target": "brigada@ambiente.gob.ar",
+          "requirements": [
+            "Descripción y evidencia del hecho; requisitos adicionales por corroborar"
+          ],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "defensoria-nacion",
+      "name": "Defensoría del Pueblo de la Nación",
+      "level": "national",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": null,
+        "province": null,
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "documented_intake",
+      "topics": [
+        "derechos_ambientales",
+        "actuacion_estatal"
+      ],
+      "summary": "Queja/orientación sobre actuaciones estatales; la página indica posterior escrito firmado para formalizar. Competencia y admisibilidad se revisan.",
+      "sources": [
+        {
+          "url": "https://defensor.gob.ar/quejas.php",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page_indexed"
+        },
+        {
+          "url": "https://defensor.gob.ar/competencia.php",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page_indexed"
+        }
+      ],
+      "officeAddress": "Suipacha 365, CABA",
+      "channels": [
+        {
+          "id": "defensoria-contact",
+          "kind": "form",
+          "label": "Cómo presentar una queja",
+          "target": "https://defensor.gob.ar/quejas.php",
+          "requirements": [
+            "Escrito firmado posterior a evaluación según página oficial"
+          ],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        },
+        {
+          "id": "defensoria-email",
+          "kind": "email",
+          "label": "Contacto",
+          "target": "defensor@defensor.gob.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    },
+    {
+      "id": "apn",
+      "name": "Administración de Parques Nacionales",
+      "level": "national",
+      "jurisdiction": {
+        "country": "AR",
+        "provinceId": null,
+        "province": null,
+        "department": null,
+        "officePoint": null,
+        "influenceGeometry": null
+      },
+      "status": "general_contact",
+      "topics": [
+        "area_protegida_nacional"
+      ],
+      "summary": "Contacto general publicado. Determinar área protegida concreta y canal de incidentes de la intendencia; no asumir competencia sobre toda reserva mendocina.",
+      "sources": [
+        {
+          "url": "https://www.argentina.gob.ar/parquesnacionales",
+          "reviewedAt": "2026-10-06",
+          "method": "official_page_indexed"
+        }
+      ],
+      "channels": [
+        {
+          "id": "apn-info",
+          "kind": "email",
+          "label": "Información general",
+          "target": "informes@apn.gob.ar",
+          "requirements": [],
+          "attachments": {
+            "status": "not_verified",
+            "types": [],
+            "maxBytes": null
+          },
+          "authentication": "not_verified",
+          "officialReceipt": {
+            "status": "not_tested"
+          },
+          "delivery": {
+            "mode": "manual",
+            "connectorImplemented": false,
+            "submissionTested": false,
+            "officialWriteApi": "not_found_in_reviewed_material"
+          }
+        }
+      ]
+    }
+  ]
+}
